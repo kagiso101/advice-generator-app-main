@@ -6,4 +6,12 @@ import { Injectable } from '@angular/core';
 export class AdviceService {
 
   constructor() { }
+
+
+
+generateAdvice(){
+  return ' hello there'
+}
+
+
 }

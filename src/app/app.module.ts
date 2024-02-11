@@ -8,7 +8,7 @@ import { AdviceComponent } from './components/advice/advice.component';
 @NgModule({
   declarations: [
     AppComponent,
-    AdviceComponent
+    // AdviceComponent
   ],
   imports: [
     BrowserModule,
