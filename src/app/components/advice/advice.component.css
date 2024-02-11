@@ -1,14 +1,28 @@
-/* PRIM
+/* You can add global styles to this file, and also import other style files */
+:root {
+  /* primary */
   --Light-Cyan: hsl(193, 38%, 86%);
   --Neon-Green: hsl(150, 100%, 66%);
 
-  NEUT
+  /* neutral */
   --Grayish-Blue: hsl(217, 19%, 38%);
   --Dark-Grayish-Blue: hsl(217, 19%, 24%);
-  --Dark-Blue: hsl(218, 23%, 16%); */
+  --Dark-Blue: hsl(218, 23%, 16%);
+}
+
+body {
+  background-color: var(--Dark-Blue);
+  overflow: hidden;
+}
+
+* {
+  font-family: "Manrope";
+  margin: 0;
+  padding: 0;
+}
 
 .advice-page-container {
-  margin: 27vh auto;
+  margin: 17vh auto;
   border-radius: 13px;
   display: flex;
   align-items: center;
@@ -62,23 +76,34 @@ p {
   box-shadow: 0 0 30px var(--Neon-Green);
 }
 
-@media (max-width: 23.45em) {
+@media (max-width: 500px) {
   .advice-page-container {
-    border-radius: 20px;
-    width: 23rem;
-    height: 19.5rem;
-    padding: 2rem 1.8rem;
-    margin: 380px auto;
+    width: 25rem;
+    padding: 2rem 1rem;
   }
-
   p {
-    margin-bottom: 1.8rem;
+    font-size: 24px;
   }
-
   .desktop-svg {
     display: none;
   }
   .mobile-svg {
     display: inline;
+  }
+}
+
+@media (max-width: 375px) {
+  .advice-page-container {
+    border-radius: 20px;
+    width: 18rem;
+    height: 16.5rem;
+    padding: 2rem 2rem;
+    margin: 150px auto;
+  }
+
+  p {
+    margin-bottom: 26px;
+    line-height: 2.1rem;
+    font-size: 22px;
   }
 }
