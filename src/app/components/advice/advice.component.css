@@ -28,7 +28,8 @@ body {
   align-items: center;
   flex-direction: column;
   width: 28.5rem;
-  height: 18rem;
+  /* height: 18rem; */
+  height: auto;
   padding: 2rem;
   background-color: var(--Dark-Grayish-Blue);
   position: relative;
@@ -40,11 +41,14 @@ h1 {
   font-size: 0.8rem;
   font-weight: 800;
   letter-spacing: 3px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
 }
 
 p {
   line-height: 2.7rem;
-  margin-bottom: 2.6rem;
+  margin: 2.6rem 0;
   text-align: center;
   font-size: 1.75rem;
   font-weight: 800;
@@ -57,9 +61,10 @@ p {
 
 .mobile-svg {
   display: none;
+  margin-bottom: 2rem;
 }
 
-.dice-div {
+.dice-icon {
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -73,18 +78,28 @@ p {
   bottom: -2rem;
 }
 
-.dice-div:hover {
+.dice-icon:hover {
   transition-duration: 200ms;
   box-shadow: 0 0 30px var(--Neon-Green);
 }
 
 @media (max-width: 500px) {
+}
+
+@media (min-width: 281px) and (max-width: 480px) {
   .advice-page-container {
-    width: 25rem;
+    border-radius: 20px;
+    width: 18rem;
+    /* height: 16.5rem; */
+    height: auto;
     padding: 2rem 1rem;
+    margin: 150px auto;
   }
+
   p {
-    font-size: 24px;
+    margin: 26px 0;
+    line-height: 2rem;
+    font-size: 20px;
   }
   .desktop-svg {
     display: none;
@@ -94,18 +109,19 @@ p {
   }
 }
 
-@media (max-width: 375px) {
+@media (min-width: 481px) and (max-width: 1024px) {
   .advice-page-container {
-    border-radius: 20px;
-    width: 18rem;
-    height: 16.5rem;
-    padding: 2rem 2rem;
-    margin: 150px auto;
+    width: 25rem;
+    padding: 2rem 1rem;
   }
-
   p {
-    margin-bottom: 26px;
-    line-height: 2.1rem;
-    font-size: 22px;
+    font-size: 24px;
+    line-height: 2.5rem;
+  }
+  .desktop-svg {
+    display: none;
+  }
+  .mobile-svg {
+    display: inline;
   }
 }

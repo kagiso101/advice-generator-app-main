@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { AdviceService } from './advice.service';
 
 @Component({
@@ -6,12 +6,16 @@ import { AdviceService } from './advice.service';
   templateUrl: './advice.component.html',
   styleUrls: ['./advice.component.css'],
 })
-export class AdviceComponent {
-  adviceId: number = 117;
-  adviceStr: string =
-    "It is easy to sit up and take notice, what's difficult is getting up and taking action";
-
+export class AdviceComponent implements OnInit {
+  adviceId: any;
+  adviceStr: any;
   constructor(private advice: AdviceService) {}
+  ngOnInit(): void {
+    this.advice.fetchData().subscribe((res) => {
+      this.adviceStr = res.slip.advice;
+      this.adviceId = res.slip.id;
+    });
+  }
 
   getAdvice() {
     this.advice.fetchData().subscribe((res) => {
