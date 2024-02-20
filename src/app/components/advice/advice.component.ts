@@ -10,11 +10,9 @@ export class AdviceComponent implements OnInit {
   adviceId: any;
   adviceStr: any;
   constructor(private advice: AdviceService) {}
+
   ngOnInit(): void {
-    this.advice.fetchData().subscribe((res) => {
-      this.adviceStr = res.slip.advice;
-      this.adviceId = res.slip.id;
-    });
+    this.getAdvice();
   }
 
   getAdvice() {
